@@ -22,13 +22,16 @@ public class Main {
         BiPredicate<String, String> comprobarNumero5 = (x, y) -> x.equals(y);
         System.out.println(comprobarNumero5.test("hola", "holaa"));
         //Ejercicio 6
-
-        Integer[] lista= {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
-        List<String> listaNumeros= new ArrayList<>();
-        listaNumeros = Arrays.asList(lista);
-        Predicate<List<Integer>> comprobarNumeros6 =
-
-
-
+        List<Integer> listaNumeros = Arrays.asList(0,1,2,3,4,5,27,29,8,9);
+        Predicate<List<Integer>> comprobarNumero6 = x -> {
+            boolean resultado = false;
+            for (int n : x){
+                if (n>25 && n<30){
+                    resultado = true;
+                }
+            }
+            return resultado;
+        };
+        //Ejercicio 7
     }
 }
