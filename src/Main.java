@@ -88,13 +88,14 @@ public class Main {
         System.out.println(mostrarFecha.get());
 
         //Ejercicio 12
-        Supplier<DayOfWeek> mostrarDiaSemana = () -> {
-            Date dia = new Date();
-            DayOfWeek day = DayOfWeek.of(dia.getDay());
-            return day;
-        };
-        System.out.println(mostrarDiaSemana.get());
+        Supplier<String> diaActual = () -> "El dia actual es: "+ LocalDate.now().getDayOfWeek();
+        System.out.println(diaActual.get());
+
         //Ejercicio 13
+        cincoPaises.forEach(a -> System.out.println(a.toUpperCase()));
+
+        //Ejercicio 14
+
 
 
     }
