@@ -3,6 +3,7 @@ import java.time.LocalDate;
 import java.time.format.TextStyle;
 import java.util.*;
 import java.util.function.BiPredicate;
+import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
 
@@ -95,8 +96,18 @@ public class Main {
         cincoPaises.forEach(a -> System.out.println(a.toUpperCase()));
 
         //Ejercicio 14
+        Function<String, Integer> longitudCadena = (x) -> x.length();
+        System.out.println(longitudCadena.apply("Programacion"));
 
+        //Ejercicio 15
+        Function<Integer, Integer> potencia = (x) -> x*x;
+        System.out.println(potencia.apply(4));
 
+        //Ejercicio 16
+        Function<Double, String> mostrarString2 = (x) -> "Resultado: " + x;
+        System.out.println(mostrarString2.apply(4.0));
+
+        //Ejercicio 17
 
     }
 }
