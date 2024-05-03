@@ -108,6 +108,21 @@ public class Main {
         System.out.println(mostrarString2.apply(4.0));
 
         //Ejercicio 17
+        List<String> lista1 = Arrays.asList("Murcia", "Lugo", "Madrid", "Valencia");
+        Function<String, Integer> funcion1 = a-> a.length();
+        HashMap<String, Integer> map = convertirListaEnMap(lista1,funcion1);
+        map.forEach((s,n)-> System.out.println(s+" "+n));
 
+        //Ejercicio 18
+        List<String> lista2 = Arrays.asList("hello", "world", "java", "lambda");
+        lista2.forEach(System.out::println);
+        lista2.sort(String::compareTo);
     }
+        public static HashMap<String, Integer> convertirListaEnMap(List<String> lista, Function<String, Integer> funcion){
+            HashMap<String, Integer> map = new HashMap<>();
+            lista.forEach(a -> map.put(a, funcion.apply(a)));
+            return map;
+
+        }
+
 }
